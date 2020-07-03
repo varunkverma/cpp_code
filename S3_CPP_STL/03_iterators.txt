@@ -1,0 +1,38 @@
+Types of Iteratorts:
+
+1. Input - Only read is allowed
+
+2. Output - Only write is allowed
+
+3. Forward - Have capabilities of both Input and Output iterators. Move forward only.
+
+4. Bidirectional - Have capabilities of Forward iterator. Move in both directions.
+
+5. Random - Have capabilities of Bidirectional iterator. Random access. Compare two iterators.
+
+
+Iterators with Containers:
+
+-> Simple Containers
+    #   forward_list(linked list) - Forward
+    #   list(doubly linked list) - Bidirectional
+    #   vector - Random
+
+-> Associative Containers
+    #   set - Bidirectional
+    #   map - Bidirectional
+    #   multimap - Bidirectional
+    #   multiset - Bidirectional
+    #   unordered_set - Forward
+    #   unordered_map - Forward
+
+-> Adaptor Containers
+    #   queue - Do not have iterators
+    #   stack - Do not have iterators
+    #   priority_queue - Do not have iterators
+
+Note: Input iterator w.r.t the prev, next and advance functions
+    # input iterator is of Random access - O(1)
+    # input iterator is of foward access - O(n), n is positive
+    # input iterator is of bidirectional access - O(n), n is positive or negative
+   

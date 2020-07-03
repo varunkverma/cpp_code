@@ -1,0 +1,6 @@
+-> Wrute once, use for any data type.
+-> Like macros, processed by compiler. But better than macros as type checking is performed.
+-> Two Types:
+    1. Function Templates: sort, linear search, binary search, etc.
+    2. Class Templates: stack, queue, deque, etc.
+-> The main concept behind STL.
