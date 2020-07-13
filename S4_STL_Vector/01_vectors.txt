@@ -1,0 +1,63 @@
+Advantages of Vectos:
+- STL container
+- Dynamic Size
+- Rich Library Functions like find, erase, insert, etc.
+- no need to pass size to a func, always pointer to the vector is passed
+- Easy to know the Size
+- Can be returned from a Function
+- By default initialized with default values.
+- Can copy a vector to other, v1=v2.
+- pre-allocates some extra space
+
+Note:
+ * find size of array:
+    int n = sizeof(arr)/sizeof(arr[0]);
+ * find size of vector
+    int n = v.size();
+
+Note:
+ * You cannot return a local static array from a function.
+ * But you can return a local Dynamically initialized array or a vector from a function.
+
+Some important functions:
+- pop_back() - removes last element. Removes last element. This is a typical stack operation. It shrinks the %vector by one. Note that no data is returned, and if the last element's data is needed, it should be retrieved before pop_back() is called.
+
+- front() - returns reference to the first element. Returns a read/write reference to the data at the first
+element of the %vector.
+
+- back() - returns reference to the last element. Returns a read/write reference to the data at the last
+element of the %vector.
+
+- insert() - inserts at a defined position pointed by an iterator, or copy elements from one iterator to the next. An iterator that points to the inserted data. This function will insert a copy of the given rvalue before the specified location. Note that this kind of operation could be expensive for a %vector and if it is frequently used the user should consider using std::list.
+
+- erase() - removes en element from a particular position pointed by an iterator, or multiple elements from one iterator to another.Erases all the elements. Note that this function only erases the
+elements, and that if the elements themselves are pointers, the
+pointed-to memory is not touched in any way. Managing the pointer is
+the user's responsibility.
+
+- clear() -  removes the elements from a vector. Erases all the elements. Note that this function only erases the
+elements, and that if the elements themselves are pointers, the
+pointed-to memory is not touched in any way. Managing the pointer is
+the user's responsibility.
+
+- resize() -  resize the vector.  Number of elements the %vector should contain. This function will %resize the %vector to the specified number of elements. If the number is smaller than the %vector's current size the %vector is truncated, otherwise default constructed elements are appended.
+
+- empty() - checks if vector is empty
+
+Time Complexities of vector functions:
+
+-> O(1): front(), back(), empty(), begin(), rbegin(), cbegin(), crbegin(), end(), rend(), cend(), rcend(), size()
+-> push_back() -  average case: O(1) and worst: O(n)
+-> pop_back() - O(1)
+-> insert() - O(n)
+-> erase - O(n)
+-> resize - O(n)
+
+
+How vectors work internally:
+-> internally uses Dynamically allocated arrays only.
+-> if current allocated space becomes full, do following:
+      -  Create a new larger space of double size.
+      -  Copy eleme  from old space to new space.
+      -  Free old space.
+-> time complexity to do so is O(n). Average time for inserting (n+1) elements(i.e., insert an element at the end of a vector) is O(1).
