@@ -1,0 +1,10 @@
+Time Complexities:
+
+insert_after() - O(1) for one item and O(m) for m items.
+erase_after() - O(1) for one item and O(m) for m items.
+push_front() - O(1)
+pop_front() - O(1)
+reverse() - O(n)
+sort() - O(nlogn)
+remove() - O(n)
+assign() - O(1) for one item and O(m) for m items.
