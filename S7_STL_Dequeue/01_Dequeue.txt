@@ -1,0 +1,2 @@
+-> Provides functionality of both stack and queue, i.e., you can insert/delete from both the ends.
+-> C++ STL dequeue is different from othe language implementaton(using linked list), as it promises random access, arbitrary insertions in O(1) time.
